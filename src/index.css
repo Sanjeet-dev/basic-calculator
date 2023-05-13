@@ -1,69 +1,73 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+main {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  height:100vh;
+  width:100wh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+
+
+
+.display {
+  height: 5rem;
+  width: 18rem;
+  background-color: grey;
+  border-radius:8px 8px 0 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: flex-end;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.calculator-screen {
+  width:100%;
+  font-size: 3rem;
+  height: 80px;
+  border: none;
+  color: #fff;
+  text-align: right;
+  background-color:grey;
+  
+}
+.calculator-screen:focus{
+  outline:none !important;
+  border:none !important;
+}
+.buttons {
+  height: 20rem;
+  width: 18rem;
+  background-color: whitesmoke;
+  border-radius:0 0 8px 8px;
+}
+button{
+  height:4rem;
+  background-color: #fff;
+  color: #333;
+  border-radius:3px;
+  border:1px solid #c4c4c4;
+  font-size:2rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+  background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
+  text-shadow: 0 1px rgba(255,255,255,.4);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+button:hover{
+  background-color:#eaeaea;
 }
-button:hover {
-  border-color: #646cff;
+.operator{
+  background-color:orange;
+  color:#fff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.calculator-keys{
+  display:grid;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.last-row{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
